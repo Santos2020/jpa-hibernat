@@ -12,7 +12,7 @@ import com.algaworks.algafood.domain.model.Cidade;
 import com.algaworks.algafood.domain.repository.CidadeRepository;
 
 @Component
-public abstract class CidadeRepositoryImpl implements CidadeRepository {
+public  class CidadeRepositoryImpl implements CidadeRepository {
 
 	@PersistenceContext
 	private EntityManager manager;

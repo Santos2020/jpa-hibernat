@@ -12,7 +12,7 @@ import com.algaworks.algafood.domain.model.Estado;
 import com.algaworks.algafood.domain.repository.EstadoRepository;
 
 @Component
-public abstract class EstadoRepositoryImpl implements EstadoRepository {
+public  class EstadoRepositoryImpl implements EstadoRepository {
 
 	@PersistenceContext
 	private EntityManager manager;

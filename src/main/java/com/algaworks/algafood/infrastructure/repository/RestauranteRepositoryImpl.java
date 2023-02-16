@@ -12,7 +12,7 @@ import com.algaworks.algafood.domain.model.Restaurante;
 import com.algaworks.algafood.domain.repository.RestauranteRepository;
 
 @Component
-public abstract class RestauranteRepositoryImpl implements RestauranteRepository {
+public  class RestauranteRepositoryImpl implements RestauranteRepository {
 
 	@PersistenceContext
 	private EntityManager manager;

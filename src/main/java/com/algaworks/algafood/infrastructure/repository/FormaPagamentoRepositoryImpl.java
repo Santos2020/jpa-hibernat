@@ -12,7 +12,7 @@ import com.algaworks.algafood.domain.model.FormaPagamento;
 import com.algaworks.algafood.domain.repository.FormaPagamentoRepository;
 
 @Component
-public abstract class FormaPagamentoRepositoryImpl implements FormaPagamentoRepository {
+public class FormaPagamentoRepositoryImpl implements FormaPagamentoRepository {
 
 	@PersistenceContext
 	private EntityManager manager;
