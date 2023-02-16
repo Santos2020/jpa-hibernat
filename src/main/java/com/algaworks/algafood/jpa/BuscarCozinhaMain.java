@@ -11,16 +11,15 @@ import com.algaworks.algafood.domain.repository.CozinhaRepository;
 public class BuscarCozinhaMain {
 
 	public static void main(String[] args) {
-		ApplicationContext applicationContext = new SpringApplicationBuilder
-				(AlgafoodApiApplication.class)
+		ApplicationContext applicationContext = new SpringApplicationBuilder(AlgafoodApiApplication.class)
 				.web(WebApplicationType.NONE)
 				.run(args);
 		
-		CozinhaRepository CozinhaRepository = applicationContext.getBean(CozinhaRepository.class);
+		CozinhaRepository cozinhaRepository = applicationContext.getBean(CozinhaRepository.class);
 		
-		Cozinha cozinha = CozinhaRepository.buscar(1L);
+		Cozinha cozinha = cozinhaRepository.buscar(1L);
 		
-			System.out.println(cozinha.getNome());
+		System.out.println(cozinha.getNome());
 	}
 	
 }
