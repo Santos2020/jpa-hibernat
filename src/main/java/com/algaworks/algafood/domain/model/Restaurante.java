@@ -14,14 +14,13 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Data
-@Entity
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-
+@Entity
 public class Restaurante {
 
 	@EqualsAndHashCode.Include
-	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
 	private Long id;
 
 	@Column(nullable = false)
