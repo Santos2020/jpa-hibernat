@@ -1,6 +1,7 @@
 package com.restaurante.food.api.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,11 +9,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.restaurante.food.domain.exception.EntidadeEmUsoException;
@@ -97,5 +100,16 @@ public class CidadeController {
 			return ResponseEntity.status(HttpStatus.CONFLICT).build();
 
 		}
+	}
+	@PatchMapping("/{cidadeId}")
+	public ResponseEntity<?> atualizarParcial(@PathVariable Long cidadeId,
+			@RequestBody Map<String, Object> campos){
+				
+		campos.forEach((nomePropriedade, valorPropriedade) -> {
+			System.out.println(nomePropriedade +  " = " + valorPropriedade );
+		});
+		
+		return ResponseEntity.ok().build();
+		
 	}
 }
