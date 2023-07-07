@@ -31,13 +31,13 @@ public class CadastroCidadeService {
 
 		cidade.setEstado(estado);
 
-		return cidadeRepository.salvar(cidade);
+		return cidadeRepository.save(cidade);
 	}
 
 	public void excluir(Long cidadeId) {
 
 		try {
-			cidadeRepository.remover(cidadeId);
+			cidadeRepository.deleteById(cidadeId);
 
 		} catch (EmptyResultDataAccessException e) {
 			throw new EntidadeNaoEncontradaException(
