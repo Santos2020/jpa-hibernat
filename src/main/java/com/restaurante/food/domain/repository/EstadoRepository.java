@@ -1,17 +1,13 @@
 package com.restaurante.food.domain.repository;
 
-import java.util.List;
-
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.restaurante.food.domain.model.Estado;
 
 @Repository
-public interface EstadoRepository {
+public interface EstadoRepository extends JpaRepository<Estado, Long> {
 
-	List<Estado> listar();
-    Estado buscar(Long Id);
-    Estado salvar(Estado estado);
-	void remover(Long Id);
+	
 
 }
